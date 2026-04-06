@@ -1,14 +1,17 @@
 
+
+long long mod=1e9+7;
+
 long long power(long long x, long long y){
     long long res = 1;
+    x=x%mod;
     while(y){
-        if(y & 1) res *= x;
-        x *= x;
+        if(y & 1) res =res * x %mod;
+        x = x*x%mod;
         y >>= 1;
     }
     return res;
 }
-
 
    //int n; cin>>n;
    // vector <long long> v(n);
